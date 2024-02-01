@@ -11,7 +11,7 @@ const state = {
       label: "Tasks",
       fill: false,
       lineTension: 0.5,
-      backgroundColor: "rgba(75,192,192,1)",
+      backgroundColor: "#546FFF",
       borderColor: "rgba(0,0,0,1)",
       borderWidth: 2,
       data: [1, 2, 1, 2.5, 1.5, 2, 2],
