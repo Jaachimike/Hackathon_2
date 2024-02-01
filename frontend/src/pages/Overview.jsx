@@ -1,12 +1,11 @@
 import React, { useState } from "react";
+import Chart from "../components/Chart";
 import bell from "../assets/Overview/notif.svg";
 import profile_pic from "../assets/Overview/Profil.png";
 import running_task from "../assets/Overview/patient.svg";
 import activity from "../assets/Overview/Activity.svg";
 import task_image from "../assets/Overview/task_images/Image.png";
-
 import calender from "../assets/Overview/Calender.svg";
-
 import TaskDisplay from "../components/TaskDisplay";
 
 const tasks = [
@@ -88,9 +87,9 @@ const Overview = () => {
             </div>
           </div>
           {/* Activity and Running Task  */}
-          <div className="flex justify-between px-4">
+          <div className="flex items-center space-x-10  px-4">
             <img src={running_task} alt="" />
-            <img src={activity} alt="" />
+            <Chart className="h-20" />
           </div>
 
           {/* Upcoming Tasks */}
