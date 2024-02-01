@@ -5,6 +5,7 @@ import Overview from "../pages/Overview";
 import Tasks from "../pages/Tasks";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
+import Settings from "../pages/Settings";
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
         <Routes>
           <Route index path="/" element={<Overview />} />
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>

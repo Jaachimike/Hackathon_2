@@ -38,17 +38,17 @@ const NavBar = () => {
             </li>
 
             <li className="p-4 hover:bg-gray-100 rounded-lg">
-              <a href="/overview" className="flex items-center">
+              <a href="/message" className="flex items-center">
                 <img src={message_logo} alt="" className="mr-4" />
                 <span className="font-semibold">Message</span>
               </a>
             </li>
             {/* ... other menu items with similar structure ... */}
             <li className="p-4 hover:bg-gray-100 rounded-lg">
-              <a href="/settings" className="flex items-center">
+              <Link to="/settings" className="flex items-center">
                 <img src={settings_logo} alt="" className="mr-4" />
                 <span className="font-semibold">Settings</span>
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="bg-gray-700 p-4 mt-8 rounded-md">
