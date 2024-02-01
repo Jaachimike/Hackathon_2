@@ -58,6 +58,18 @@ const tasks = [
   // ... more tasks
 ];
 
+const taskToday = [
+  {
+    id: 1,
+    name: "Creating Awesome Mobile Apps",
+    image: task_image,
+    progress: 90,
+    timeLeft: "1 hour left",
+    profilePictures: [profile_pic, profile_pic],
+    subtitle: "UI/UX Designer",
+  },
+];
+
 const Overview = () => {
   return (
     <>
@@ -86,8 +98,109 @@ const Overview = () => {
         </div>
         {/* Side Bar  */}
         <div className="mt-8">
-          <div>
+          <div className="mb-10">
             <img src={calender} alt="" />
+          </div>
+
+          <div className="bg-white py-3 px-3">
+            <div className="mb-4">
+              <h3 className="font-bold">Today's Task</h3>
+            </div>
+            {/* Task Today  */}
+            {taskToday.map((task, index) => {
+              return (
+                <div
+                  key={task.id}
+                  className="task-card h-fit mb-4 shadow-md rounded-lg "
+                >
+                  <div className="image-container h-2/5 relative">
+                    <img
+                      src={task.image}
+                      className="w-full h-full object-cover rounded-t-lg"
+                    />
+                  </div>
+                  <div className=" px-4 py-2  rounded-bl-lg rounded-br-lg text-black">
+                    <span className="text-lg font-medium block">
+                      {task.name}
+                    </span>
+                    <span className="text-sm">{task.subtitle}</span>
+                  </div>
+                  <div className="progress-section px-4 mt-4 flex justify-between items-center">
+                    <div className="text-sm">Progress</div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold">{task.progress}%</span>
+                    </div>
+                  </div>
+                  {/* Progress Bar  */}
+                  <div className="px-4">
+                    <div className="bg-gray-200  h-2 rounded-full w-full">
+                      <div
+                        className="bg-blue-500 h-full rounded-full"
+                        style={{ width: `${task.progress}%` }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div className="time-left px-4 flex justify-between items-center mt-2">
+                    <span className="text-sm">{task.timeLeft}</span>
+                    <div className="flex -space-x-3">
+                      {task.profilePictures.map((profilePicture) => (
+                        <img
+                          key={profilePicture}
+                          src={profilePicture}
+                          alt=""
+                          className="w-8 h-8 rounded-full object-cover border-2 border-white"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Task Details */}
+            <div>
+              <div className="flex justify-between items-center mb-5">
+                <h2 className="font-bold">Task Details</h2>
+                <p className="text-xs">UI/UX Designer</p>
+              </div>
+
+              {/* Task Details List */}
+              <>
+                <table className="table-auto">
+                  <tbody>
+                    <tr className=" *:pb-5 ">
+                      <td>
+                        <div className="bg-[#F5F5F7] rounded-full px-3 py-1 mr-3">
+                          1
+                        </div>
+                      </td>
+                      <td>Understandng the tools in Figma</td>
+                    </tr>
+                    <tr className=" *:pb-5 ">
+                      <td>
+                        <div className="bg-[#F5F5F7] rounded-full px-3 py-1 mr-3">
+                          2
+                        </div>
+                      </td>
+                      <td>Understand the basics of making designs</td>
+                    </tr>
+                    <tr className=" *:pb-5 ">
+                      <td>
+                        <div className="bg-[#F5F5F7] rounded-full px-3 py-1 mr-3">
+                          3
+                        </div>
+                      </td>
+                      <td>Design a mobile application with figma</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </>
+
+              <button className="bg-[#546FFF] mt-6 w-full rounded-lg py-2 text-white">
+                Go to Detail
+              </button>
+            </div>
           </div>
         </div>
       </div>

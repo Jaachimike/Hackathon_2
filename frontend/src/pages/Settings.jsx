@@ -39,12 +39,24 @@ const Settings = () => {
       </div>
 
       {/* Settings */}
-      <div className="bg-white">
+      <div className="bg-white rounded-lg">
         <div className=" flex border-b-2 pt-3 pl-10">
-          <div className={`px-2 py-2 mr-3  `}>
+          <div
+            className={`px-2 py-2 mr-3 ${
+              selectedTab === "General"
+                ? "border-b-2 border-[#546FFF]"
+                : "border-b-0 "
+            } `}
+          >
             <button onClick={() => handleTabClick("General")}>General</button>
           </div>
-          <div className={` px-2 py-2  `}>
+          <div
+            className={` px-2 py-2 ${
+              selectedTab === "Notification"
+                ? "border-b-2 border-[#546FFF]"
+                : "border-b-0 "
+            } `}
+          >
             <button onClick={() => handleTabClick("Notification")}>
               Notification
             </button>

@@ -63,7 +63,7 @@ const TaskDisplay = ({ tasks, cardsToShow = 2, ...otherProps }) => {
                     />
                   </div>
                   <div className=" px-4 py-2  rounded-bl-lg rounded-br-lg text-black">
-                    <span className="text-lg font-medium block">
+                    <span className="text-lg font-medium block whitespace-nowrap">
                       {task.name}
                     </span>
                     <span className="text-sm">{task.subtitle}</span>
