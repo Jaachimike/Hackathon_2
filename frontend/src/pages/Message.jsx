@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import profile_pic from "../assets/Overview/Profil.png";
+const profile1 = "https://i.pravatar.cc/150?img=64";
+const profile2 = "https://i.pravatar.cc/150?img=59";
+const profile3 = "https://i.pravatar.cc/150?img=51";
+const profile4 = "https://i.pravatar.cc/150?img=7";
 
 const chatsData = [
   {
     id: 1,
     name: "Jaachimike Okafor",
-    profile_pic: profile_pic,
+    profile_pic: profile2,
     lastMessage: "That's great!",
     messages: [
       {
@@ -32,7 +36,7 @@ const chatsData = [
   {
     id: 2,
     name: "Morenike",
-    profile_pic: profile_pic,
+    profile_pic: profile1,
     lastMessage: "Wonderful!",
     messages: [
       {
@@ -59,7 +63,7 @@ const chatsData = [
   {
     id: 3,
     name: "JDK",
-    profile_pic: profile_pic,
+    profile_pic: profile3,
     lastMessage: "Cool Cool",
     messages: [
       {
@@ -86,7 +90,7 @@ const chatsData = [
   {
     id: 4,
     name: "ElCommandante",
-    profile_pic: profile_pic,
+    profile_pic: profile4,
     lastMessage: "You?",
     messages: [
       {

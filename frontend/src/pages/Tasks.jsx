@@ -4,52 +4,62 @@ import profile_pic from "../assets/Overview/Profil.png";
 import category_logo from "../assets/Tasks/element-1.svg";
 import sort_logo from "../assets/Tasks/sort.svg";
 import TaskDisplay from "../components/TaskDisplay";
-import task_image from "../assets/Overview/task_images/Image.png";
+import task1 from "../assets/Overview/task_images/Image.png";
+import task2 from "../assets/Overview/task_images/Image (1).png";
+import task3 from "../assets/Overview/task_images/Image (2).png";
+import task4 from "../assets/Overview/task_images/Image (3).png";
+import task5 from "../assets/Overview/task_images/Image (4).png";
+import task6 from "../assets/Overview/task_images/Image (5).png";
+
+const profile1 = "https://i.pravatar.cc/150?img=64";
+const profile2 = "https://i.pravatar.cc/150?img=59";
+const profile3 = "https://i.pravatar.cc/150?img=51";
+const profile4 = "https://i.pravatar.cc/150?img=7";
 
 const timeLimit = [
   {
     id: 1,
     name: "Creating Mobile App Design",
-    image: task_image,
+    image: task1,
     progress: 75,
     timeLeft: "1 hour left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile2, profile4],
     subtitle: "UI/UX Design",
   },
   {
     id: 2,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task3,
     progress: 50,
     timeLeft: "2 hours left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile1, profile3],
     subtitle: "Web Developer",
   },
   {
     id: 3,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task6,
     progress: 20,
     timeLeft: "1 hour left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile3, profile2],
     subtitle: "Web Developer",
   },
   {
     id: 4,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task5,
     progress: 30,
     timeLeft: "4 hours left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile1, profile4],
     subtitle: "Web Developer",
   },
   {
     id: 5,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task2,
     progress: 90,
     timeLeft: "5 hourss left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile2, profile1],
     subtitle: "Web Developer",
   },
   // ... more tasks
@@ -59,46 +69,46 @@ const newTask = [
   {
     id: 1,
     name: "Creating Mobile App Design",
-    image: task_image,
+    image: task4,
     progress: 75,
     timeLeft: "3 days left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile2, profile4],
     subtitle: "UI/UX Design",
   },
   {
     id: 2,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task2,
     progress: 50,
     timeLeft: "7 days left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile1, profile3],
     subtitle: "Web Developer",
   },
   {
     id: 3,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task6,
     progress: 20,
     timeLeft: "7 days left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile3, profile2],
     subtitle: "Web Developer",
   },
   {
     id: 4,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task1,
     progress: 30,
     timeLeft: "7 days left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile1, profile4],
     subtitle: "Web Developer",
   },
   {
     id: 5,
     name: "Creating Perfect Website",
-    image: task_image,
+    image: task3,
     progress: 90,
     timeLeft: "7 days left",
-    profilePictures: [profile_pic, profile_pic],
+    profilePictures: [profile3, profile2],
     subtitle: "Web Developer",
   },
   // ... more tasks
@@ -179,9 +189,13 @@ const Tasks = () => {
       {/* Body Section */}
       <div>
         {/* Time Limit Tasks */}
-        <TaskDisplay tasks={timeLimit} cardsToShow={3} />
+        <TaskDisplay
+          tasks={timeLimit}
+          cardsToShow={4}
+          headerText="Time Limit"
+        />
         {/* New Tasks */}
-        <TaskDisplay tasks={newTask} cardsToShow={3} />
+        <TaskDisplay tasks={newTask} cardsToShow={4} headerText="New Tasks" />
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const TaskDisplay = ({ tasks, cardsToShow = 2, ...otherProps }) => {
                       className="w-full h-full object-cover rounded-t-lg"
                     />
                   </div>
-                  <div className=" px-4 py-2  rounded-bl-lg rounded-br-lg text-black">
+                  <div className=" py-2 flex flex-col items-start rounded-bl-lg rounded-br-lg text-black">
                     <span className="text-lg font-medium block whitespace-nowrap">
                       {task.name}
                     </span>

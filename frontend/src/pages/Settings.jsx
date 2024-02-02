@@ -7,13 +7,19 @@ import profile_pic from "../assets/Overview/Profil.png";
 import Dropdown from "../components/DropdownInput/Dropdown";
 
 const Languages = [
-  { id: 0, label: "Istanbul, TR (AHL)" },
-  { id: 1, label: "Paris, FR (CDG)" },
+  { id: 0, label: "Yoruba" },
+  { id: 1, label: "Igbo" },
+  { id: 2, label: "Hausa" },
+  { id: 3, label: "Efik" },
 ];
 
 const Timezones = [
-  { id: 0, label: "Istanbul, TR (AHL)" },
-  { id: 1, label: "Paris, FR (CDG)" },
+  { id: 0, label: "UTC-12:00" },
+  { id: 1, label: "UTC-11:00" },
+  { id: 2, label: "UTC-10:00" },
+  { id: 3, label: "UTC-09:00" },
+  { id: 4, label: "UTC-08:00" },
+  { id: 5, label: "UTC-07:00" },
 ];
 
 const Settings = () => {
