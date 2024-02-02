@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clock from "../assets/Overview/Time Circle.svg";
 
 const TaskDisplay = ({ tasks, cardsToShow = 2, ...otherProps }) => {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -85,7 +86,11 @@ const TaskDisplay = ({ tasks, cardsToShow = 2, ...otherProps }) => {
                   </div>
 
                   <div className="time-left px-4 flex justify-between items-center mt-2">
-                    <span className="text-sm">{task.timeLeft}</span>
+                    <div className="flex gap-2">
+                      <img src={clock} />
+                      <span className="text-sm">{task.timeLeft}</span>
+                    </div>
+
                     <div className="flex -space-x-3">
                       {task.profilePictures.map((profilePicture) => (
                         <img

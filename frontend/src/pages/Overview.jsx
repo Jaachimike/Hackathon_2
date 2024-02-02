@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Chart from "../components/Chart";
+import clock from "../assets/Overview/Time Circle.svg";
 import bell from "../assets/Overview/notif.svg";
 import profile_pic from "../assets/Overview/Profil.png";
 import running_task from "../assets/Overview/patient.svg";
@@ -78,7 +79,7 @@ const Overview = () => {
           {/* Profile Details */}
           <div className="flex justify-between mb-12">
             <div>
-              <h2 className="font-bold text-xl">Hi, Skylar Dias</h2>
+              <h2 className="font-bold text-xl">Hi, ProductPros</h2>
               <p>Let us finish your task today!</p>
             </div>
             <div className="flex space-x-6 items-center">
@@ -140,8 +141,12 @@ const Overview = () => {
                     </div>
                   </div>
 
-                  <div className="time-left px-4 flex justify-between items-center mt-2">
-                    <span className="text-sm">{task.timeLeft}</span>
+                  <div className="time-left px-4 pb-4 flex justify-between items-center mt-2">
+                    <div className="flex gap-2">
+                      <img src={clock} alt="time left" />
+                      <span className="text-sm">{task.timeLeft}</span>
+                    </div>
+
                     <div className="flex -space-x-3">
                       {task.profilePictures.map((profilePicture) => (
                         <img
